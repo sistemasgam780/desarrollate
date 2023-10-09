@@ -1,0 +1,22 @@
+html,
+body {
+    font-family: "Segoe UI Regular", "Segoe UI" !important;
+}
+
+.usuarioE {
+    margin-top: 15px;
+}
+
+td.sorting {
+    background-color: #cfcdcddb;
+    font-weight: bold;
+}
+
+td.sorting_asc {
+    background-color: #cfcdcddb;
+    font-weight: bold;
+}
+
+a {
+    outline: none !important;
+}

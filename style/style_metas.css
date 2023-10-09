@@ -1,0 +1,509 @@
+html,
+body {
+    font-family: "Segoe UI Regular", "Segoe UI" !important;
+}
+
+#submit {
+    letter-spacing: 1px;
+    margin-right: -685px;
+    margin-top: -90px;
+    width: 100px;
+    height: 32px;
+    outline: none !important;
+    border: none !important;
+    font-weight: bold !important;
+}
+
+select {
+    font-size: 13px !important;
+    width: 270px !important;
+    height: 35px !important;
+}
+
+#tabladinamicaload {
+    margin-top: 15px !important;
+    width: 870px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+#tabladinamicaload2 {
+    margin-top: 15px !important;
+    width: 870px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+.metasCab {
+    width: 140px !important;
+    background-color: #77777785;
+    border: none !important;
+    font-weight: bold;
+    color: black;
+    font-size: 14px !important;
+    border-radius: 3px;
+    letter-spacing: 1px;
+}
+
+.resultConex {
+    text-transform: uppercase;
+}
+
+#tabladinamicaloadM_r {
+    margin-top: 30px !important;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+.tdEncab {
+    background-color: #77777785;
+    border: none !important;
+    font-weight: bold;
+    color: black;
+    font-size: 13px;
+}
+
+.mes {
+    vertical-align: middle !important;
+    background-color: #7a7979e0;
+    font-weight: bold;
+    letter-spacing: 2px !important;
+    color: white;
+}
+
+.usuarioE {
+    margin-top: 15px;
+}
+
+#tabladinamicaloadCtos {
+    font-size: 15px;
+    margin-top: 50px;
+    top: 10px;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+    border: none !important;
+}
+
+.periodo_aa {
+    width: 250px;
+    vertical-align: middle !important;
+    background-color: #c2bbbb85;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.periodo_aca {
+    width: 250px;
+    vertical-align: middle !important;
+    background-color: #c2bbbb85;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.periodo_a {
+    width: 250px;
+    vertical-align: middle !important;
+    background-color: #c2bbbb85;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.periodo_a2 {
+    width: 130px;
+    vertical-align: middle !important;
+    background-color: #c2bbbb85;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.periodo_an {
+    width: 130px;
+    vertical-align: middle !important;
+    background-color: #c2bbbb85;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.tdEncab_ctos {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 5px;
+    border-radius: 5px;
+}
+
+.tdReal {
+    width: 200px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    background-color: #c2bbbb85;
+    border-radius: 5px;
+    font-weight: bold;
+    vertical-align: middle !important;
+}
+
+.tdObjetivo {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    background-color: #c2bbbb85;
+    border-radius: 5px;
+    font-weight: bold;
+    vertical-align: middle !important;
+}
+
+.tdR_O {
+    font-size: 14px;
+    letter-spacing: 1px;
+    background-color: #c2bbbb85;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.tdResult_ctos {
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    vertical-align: middle !important;
+    font-weight: lighter;
+}
+
+.btn-secondary {
+    font-size: 14px !important;
+    letter-spacing: 1px;
+    font-weight: bold !important;
+    margin-top: 15px;
+    outline: none !important;
+    border: none !important;
+    background: #41b5d8;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #38B1D6 !important;
+    color: white !important;
+}
+
+#tabladinamicaloadGral {
+    font-size: 15px;
+    margin: 0 auto !important;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+    border: none !important;
+    margin-top: 70px !important;
+}
+
+.tdEncab_gralC {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 190px;
+}
+
+.tdEncab_gralE {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 190px;
+}
+
+.tdEncab_gralEv {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 190px;
+}
+
+.tdEncab_gralVc {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 198px;
+}
+
+.tdEncab_gralIn {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+}
+
+.tdEncab_gralCon {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 190px;
+}
+
+.tdEncab_gralR {
+    background-color: #c2bbbb85;
+    border: none !important;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 162.85px;
+}
+
+.tdEncab_gralOb {
+    background-color: #c2bbbb85;
+    border: none !important;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 162.85px;
+}
+
+.tdEncab_gralRo {
+    background-color: #c2bbbb85;
+    border: none !important;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 170px;
+}
+
+.tdEncab_gralP {
+    background-color: #c2bbbb85;
+    border: none !important;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 162.85px;
+    vertical-align: middle !important;
+}
+
+.tdEncab_gralEp {
+    background-color: #c2bbbb85;
+    border: none !important;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 200px !important;
+    vertical-align: middle !important;
+}
+
+.tdEncab_reaOb {
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    vertical-align: middle !important;
+    font-weight: bold;
+}
+
+.tdEncab_ResultEp {
+    font-size: 17px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    vertical-align: middle !important;
+    font-weight: bold;
+    background-color: #c2bbbb85;
+}
+
+#tabladinamicaloadGralAn {
+    font-size: 15px;
+    margin: 0 auto !important;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+    border: none !important;
+    margin-top: 15px !important;
+}
+
+.container {
+    width: 1260px !important;
+}
+
+#tabladinamicaloadGral_con {
+    font-size: 15px;
+    margin-top: 40px !important;
+    top: 10px;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+    border: none !important;
+    width: 850px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+
+/* POR MES */
+
+#tabladinamicaloadConex {
+    font-size: 15px;
+    margin: 0 auto !important;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+    border: none !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+.tdFec_cont {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 140px;
+}
+
+.tdFec_entr {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 140px;
+}
+
+.tdFec_eva {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 140px;
+}
+
+.tdFec_ventC {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 170px;
+}
+
+.tdFec_ind {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 140px;
+}
+
+.tdFec_cone {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 140px;
+}
+
+.tdFec_pros {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 212px;
+}
+
+.nombreProsp {
+    vertical-align: middle !important;
+    font-weight: bold;
+}
+
+.tdEncab_fecEdat {
+    background-color: #c2bbbb85;
+    border: none !important;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    width: 150px;
+    vertical-align: middle !important;
+}
+
+.tdEncab_fecSis {
+    background-color: #c2bbbb85;
+    border: none !important;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    vertical-align: middle !important;
+}
+
+.tdResult_fec {
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    vertical-align: middle !important;
+    font-weight: lighter;
+}

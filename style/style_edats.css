@@ -1,0 +1,371 @@
+html,
+body {
+    font-family: "Segoe UI Regular", "Segoe UI" !important;
+}
+
+#tabladinamicaload {
+    margin-left: -65px !important;
+    text-align: justify !important;
+    width: 1280px !important;
+}
+
+.celdasDatos {
+    text-align: center;
+    font-weight: lighter !important;
+    color: black;
+}
+
+.titleTable {
+    margin-left: -65px !important;
+}
+
+#tabladinamicaload_length {
+    margin-left: -65px !important;
+}
+
+#tabladinamicaload_info {
+    margin-left: -65px !important;
+}
+
+#tabladinamicaload_paginate {
+    margin-top: -25px;
+}
+
+button {
+    outline: none !important;
+    border: none !important;
+}
+
+td {
+    vertical-align: middle !important;
+    text-align: center !important;
+    text-transform: uppercase;
+}
+
+.col-sm-7 {
+    margin-bottom: 25px !important;
+    margin-left: 500px !important;
+}
+
+a {
+    outline: none !important;
+}
+
+td.sorting {
+    background-color: #cfcdcddb;
+}
+
+td.sorting_asc {
+    background-color: #cfcdcddb;
+}
+
+#myModalLabel {
+    font-size: 16px;
+}
+
+.factEv {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.factKnow-Out {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#modalknowout .modal-body {
+    height: 490px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+#modalknowout td {
+    padding-left: 5px;
+    vertical-align: middle;
+    text-align: justify !important;
+}
+
+#knowout {
+    margin-right: -15px;
+    margin-bottom: -20px;
+}
+
+.tdEvaluacion {
+    text-align: justify !important;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.contEvaluacion {
+    margin-left: -3px !important;
+}
+
+#caracter {
+    width: 65px;
+    height: 26px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+#sentido {
+    width: 65px;
+    height: 26px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+#orientacion {
+    width: 65px;
+    height: 26px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+#energia {
+    width: 65px;
+    height: 26px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+#motivacion {
+    width: 65px;
+    height: 26px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+#perseverancia {
+    width: 65px;
+    height: 26px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+#suma_vitales {
+    width: 65px;
+    height: 26px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.msjEv {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    text-align: center !important;
+    font-weight: lighter;
+}
+
+.afinidadEv {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#pp200_observaciones {
+    margin-top: 6px !important;
+}
+
+#GDD {
+    margin-left: 170px;
+}
+
+#comentarios_gdd {
+    font-weight: lighter !important;
+    color: #333333;
+    font-size: 13px;
+    border-color: rgb(240 173 78);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255, 144, 0, 0.6);
+    outline: 0 none;
+    width: 268px !important;
+}
+
+.estatusEv {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#documentacion {
+    font-weight: lighter !important;
+    color: #333333;
+    font-size: 13px;
+    border-color: rgb(240 173 78);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255, 144, 0, 0.6);
+    outline: 0 none;
+    width: 268px;
+}
+
+#resultados {
+    margin-left: 170px;
+}
+
+.conexionEv {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-info {
+    font-size: 16px !important;
+    box-shadow: none !important;
+}
+
+.btn-success {
+    font-size: 16px !important;
+    box-shadow: none !important;
+}
+
+.btn-danger {
+    font-size: 16px !important;
+    box-shadow: none !important;
+}
+
+.btn-light {
+    font-size: 16px !important;
+    box-shadow: none !important;
+}
+
+.usuarioE {
+    margin-top: 15px;
+}
+
+#actualizadatos {
+    height: 33px;
+}
+
+input[type=checkbox] {
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    transform: scale(1.2);
+    float: left;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#checkbox {
+    transform: scale(1.2);
+    margin-left: -36px !important;
+    margin-top: -20px;
+}
+
+.knowOut {
+    font-size: 13px;
+}
+
+.encabezadoKO {
+    text-align: center;
+    background-color: #cfcdcddb;
+    font-weight: bold !important;
+    letter-spacing: 1px;
+}
+
+.previsibilidadE {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.potencialA {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.encabezadoPrev {
+    text-align: center;
+    background-color: #cfcdcddb;
+    font-weight: bold !important;
+    letter-spacing: 1px;
+}
+
+.encabezadoPot_a {
+    text-align: center;
+    background-color: #cfcdcddb;
+    font-weight: bold !important;
+    letter-spacing: 1px;
+}
+
+#modalprevisibilidad th {
+    padding-left: 5px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#modalprevisibilidad .modal-body {
+    height: 500px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.txtPrev {
+    text-align: justify !important;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.txtPot_a {
+    text-align: justify !important;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+input[type=radio] {
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    transform: scale(1.1);
+    float: left;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.sumaPot {
+    text-decoration: underline;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#sumaexito1 {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.indicadoresPsp {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#sumaexitoA {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+#fecha_evaluacion {
+    width: 242px;
+    margin-bottom: 10px;
+}

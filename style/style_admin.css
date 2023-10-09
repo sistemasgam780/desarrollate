@@ -1,0 +1,308 @@
+html,
+body {
+    font-family: "Segoe UI Regular", "Segoe UI" !important;
+}
+
+select {
+    width: 270px !important;
+}
+
+button {
+    margin-top: 22px;
+    outline: none !important;
+    border: none !important;
+    font-weight: bold !important;
+}
+
+#Paloma {
+    margin-top: 10px;
+    margin: 0 auto;
+}
+
+#date1 {
+    font-size: 13px;
+}
+
+#date2 {
+    font-size: 13px;
+}
+
+#fdate {
+    margin-top: 25px;
+    margin-left: -15px;
+}
+
+#trimestre1 {
+    margin-top: 15px;
+}
+
+#trimestre2 {
+    margin-top: 15px;
+}
+
+#trimestre3 {
+    margin-top: 15px;
+}
+
+#trimestre4 {
+    margin-top: 15px;
+}
+
+#anual1 {
+    margin-top: 15px;
+}
+
+#Nallely {
+    margin-top: 10px;
+    margin: 0 auto;
+}
+
+#dateo1 {
+    font-size: 13px;
+}
+
+#dateo2 {
+    font-size: 13px;
+}
+
+#fdateo {
+    margin-top: 25px;
+    margin-left: -15px;
+}
+
+#trimestre1o {
+    margin-top: 15px;
+}
+
+#trimestre2o {
+    margin-top: 15px;
+}
+
+#trimestre3o {
+    margin-top: 15px;
+}
+
+#trimestre4o {
+    margin-top: 15px;
+}
+
+#anual1o {
+    margin-top: 15px;
+}
+
+#Alan {
+    margin-top: 10px;
+    margin: 0 auto;
+}
+
+#datea1 {
+    font-size: 13px;
+}
+
+#datea2 {
+    font-size: 13px;
+}
+
+#fdatea {
+    margin-top: 25px;
+    margin-left: -15px;
+}
+
+#trimestre1a {
+    margin-top: 15px;
+}
+
+#trimestre2a {
+    margin-top: 15px;
+}
+
+#trimestre3a {
+    margin-top: 15px;
+}
+
+#trimestre4a {
+    margin-top: 15px;
+}
+
+#anual1a {
+    margin-top: 15px;
+}
+
+#Yazmin {
+    margin-top: 10px;
+    margin: 0 auto;
+}
+
+#fdatey {
+    margin-top: 25px;
+    margin-left: -15px;
+}
+
+#datey1 {
+    font-size: 13px;
+}
+
+#datey2 {
+    font-size: 13px;
+}
+
+#trimestre1y {
+    margin-top: 15px;
+}
+
+#trimestre2y {
+    margin-top: 15px;
+}
+
+#trimestre3y {
+    margin-top: 15px;
+}
+
+#trimestre4y {
+    margin-top: 15px;
+}
+
+#anual1y {
+    margin-top: 15px;
+}
+
+#Todos {
+    margin-top: 10px;
+}
+
+#fdatet {
+    margin-top: 25px;
+    margin-left: -15px;
+}
+
+#datet1 {
+    font-size: 13px;
+}
+
+#datet2 {
+    font-size: 13px;
+}
+
+#trimestre1t {
+    margin-top: 30px;
+}
+
+#trimestre2t {
+    margin-top: 30px;
+}
+
+#trimestre3t {
+    margin-top: 30px;
+}
+
+#trimestre4t {
+    margin-top: 30px;
+}
+
+#anual1t {
+    margin-top: 30px;
+}
+
+.usuarioE {
+    margin-top: 15px;
+}
+
+.tdEncab_admin {
+    background-color: #77777785;
+    border: none !important;
+    font-weight: bold;
+    color: black;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+#tabladinamicaload {
+    margin-top: 15px !important;
+    width: 870px;
+    margin: 0 auto;
+    margin-top: 50px !important;
+    margin-bottom: -20px !important;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+#tabladinamicaload_tri {
+    margin-top: 15px !important;
+    width: 1500px;
+    margin: 0 auto;
+    margin-top: 50px !important;
+    margin-bottom: 30px !important;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+.trimestre {
+    vertical-align: middle !important;
+    background-color: #7a7979e0;
+    font-weight: bold;
+    letter-spacing: 1.5px !important;
+    color: white;
+    font-size: 13px;
+}
+
+.res_met {
+    font-size: 13px !important;
+    font-weight: bold;
+}
+
+#tabladinamicaload_pal {
+    margin-top: 15px !important;
+    width: 870px;
+    margin: 0 auto;
+    margin-top: 50px !important;
+    margin-bottom: 30px !important;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+#tabladinamicaload_nay {
+    margin-top: 15px !important;
+    width: 870px;
+    margin: 0 auto;
+    margin-top: 50px !important;
+    margin-bottom: 30px !important;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+#tabladinamicaload_al {
+    margin-top: 15px !important;
+    width: 870px;
+    margin: 0 auto;
+    margin-top: 50px !important;
+    margin-bottom: 30px !important;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+#tabladinamicaload_yaz {
+    margin-top: 15px !important;
+    width: 870px;
+    margin: 0 auto;
+    margin-top: 50px !important;
+    margin-bottom: 30px !important;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+#tabladinamicaload_tod {
+    margin-top: 15px !important;
+    width: 870px;
+    margin: 0 auto;
+    margin-top: 50px !important;
+    margin-bottom: 30px !important;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+}

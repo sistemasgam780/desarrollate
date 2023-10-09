@@ -1,0 +1,95 @@
+html,
+body {
+    font-family: "Segoe UI Regular", "Segoe UI" !important;
+}
+
+#tabladinamicaload {
+    margin: 0 auto !important;
+    text-align: center;
+    margin-bottom: 45px !important;
+    margin-top: 90px !important;
+    empty-cells: hide;
+    border-collapse: separate;
+    border-spacing: 5px;
+    border: none !important;
+}
+
+.tdEncabezado {
+    background-color: #7a7979e0;
+    border: none !important;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+    font-size: 16px;
+    height: 30px;
+    letter-spacing: 3px;
+}
+
+.tdObservaciones {
+    background-color: #77777785;
+    border: none !important;
+    font-weight: bold;
+    color: black;
+    font-size: 15px !important;
+    border-radius: 3px;
+    letter-spacing: 2.5px;
+    width: 210px !important;
+    height: 25px;
+}
+
+.tdTexto {
+    border: none !important;
+}
+
+.tdAgregar {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    color: white;
+    font-size: 14px !important;
+    border-radius: 3px;
+    letter-spacing: 2.5px;
+    width: 280px;
+    vertical-align: middle !important;
+}
+
+textarea {
+    height: 80px;
+    vertical-align: middle !important;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    resize: none !important;
+    outline: 0 none;
+    border-radius: 3px;
+}
+
+.tdTxtArea {
+    background-color: #7a7979e0;
+    border: none !important;
+    color: black;
+    font-size: 14px !important;
+    border-radius: 3px;
+}
+
+.tdBtn {
+    background-color: #7a7979e0;
+    border: none !important;
+    font-weight: bold;
+    border-radius: 3px;
+    vertical-align: middle !important;
+}
+
+#agregar {
+    width: 40px !important;
+    height: 40px;
+    outline: none !important;
+}
+
+#obs {
+    width: 580px;
+}
+
+.usuarioE {
+    margin-top: 15px;
+}

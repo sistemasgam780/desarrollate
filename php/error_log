@@ -1,0 +1,22 @@
+[16-Jan-2019 19:53:35 UTC] PHP Warning:  getimagesize(../imagenes/imagen.jpg): failed to open stream: No such file or directory in /home/gamse627/nachoprueba.gamseguros.com.mx/php/fpdf/fpdf.php on line 1240
+[16-Jan-2019 19:53:35 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Missing or incorrect image file: ../imagenes/imagen.jpg' in /home/gamse627/nachoprueba.gamseguros.com.mx/php/fpdf/fpdf.php:271
+Stack trace:
+#0 /home/gamse627/nachoprueba.gamseguros.com.mx/php/fpdf/fpdf.php(1242): FPDF->Error('Missing or inco...')
+#1 /home/gamse627/nachoprueba.gamseguros.com.mx/php/fpdf/fpdf.php(885): FPDF->_parsejpg('../imagenes/ima...')
+#2 /home/gamse627/nachoprueba.gamseguros.com.mx/php/crearpdf.php(32): FPDF->Image('../imagenes/ima...', 13, 8, -300)
+#3 {main}
+  thrown in /home/gamse627/nachoprueba.gamseguros.com.mx/php/fpdf/fpdf.php on line 271
+[30-Sep-2019 14:39:15 UTC] PHP Warning:  mysqli_query(): Empty query in /home/gamse627/desarrollate.asesoresgam.com.mx/php/agregardatos.php on line 29
+[30-Sep-2019 14:39:15 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/gamse627/desarrollate.asesoresgam.com.mx/php/agregardatos.php on line 31
+[30-Sep-2019 14:39:43 UTC] PHP Warning:  mysqli_query(): Empty query in /home/gamse627/desarrollate.asesoresgam.com.mx/php/agregardatos.php on line 29
+[30-Sep-2019 14:39:43 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/gamse627/desarrollate.asesoresgam.com.mx/php/agregardatos.php on line 31
+[30-Sep-2019 14:58:07 UTC] PHP Warning:  mysqli_query(): Empty query in /home/gamse627/desarrollate.asesoresgam.com.mx/php/agregardatos.php on line 29
+[30-Sep-2019 14:58:07 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/gamse627/desarrollate.asesoresgam.com.mx/php/agregardatos.php on line 31
+[30-Sep-2019 14:58:30 UTC] PHP Warning:  mysqli_query(): Empty query in /home/gamse627/desarrollate.asesoresgam.com.mx/php/agregardatos.php on line 29
+[30-Sep-2019 14:58:30 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/gamse627/desarrollate.asesoresgam.com.mx/php/agregardatos.php on line 31
+[30-Sep-2019 14:58:59 UTC] PHP Warning:  mysqli_query(): Empty query in /home/gamse627/desarrollate.asesoresgam.com.mx/php/agregardatos.php on line 29
+[30-Sep-2019 14:58:59 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/gamse627/desarrollate.asesoresgam.com.mx/php/agregardatos.php on line 31
+[30-Sep-2019 15:00:57 UTC] PHP Warning:  mysqli_query(): Empty query in /home/gamse627/desarrollate.asesoresgam.com.mx/php/agregardatos.php on line 29
+[30-Sep-2019 15:00:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/gamse627/desarrollate.asesoresgam.com.mx/php/agregardatos.php on line 31
+[06-Jan-2022 23:20:51 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'gamse627_edatss'@'localhost' to database 'gamse627_desarrollat_pruebas' in /home/gamse627/public_html/asesoresgam.com.mx/desarrollate1/php/conexion.php on line 8
+[06-Jan-2022 17:20:51 America/Mexico_City] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/gamse627/public_html/asesoresgam.com.mx/desarrollate1/php/logout.php on line 17

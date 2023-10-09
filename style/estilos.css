@@ -1,0 +1,264 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #666;
+	background: #f2f2f2;
+	font-size: 1em;
+	line-height: 1.5em;
+
+	padding-top: 80px;
+	/* Relleno superior igual a la altura de la cabecera*/
+}
+
+h1 {
+	font-size: 1.6em;
+	line-height: 1.3em;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+	color: #030100;
+}
+
+h2 {
+	font-size: 0.9em;
+	line-height: 0.9em;
+	margin: 15px 0;
+	text-align: right;
+	font-weight: 300;
+}
+
+h3 {
+	font-size: 1.2em;
+	line-height: 0.9em;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+	color: #FDFEFE;
+}
+
+h4 {
+	font-size: 1.6em;
+	line-height: 1.3em;
+	margin: 2px 0;
+	text-align: center;
+	font-weight: 800;
+	color: #FFFFFF;
+}
+
+
+p {
+	margin: 0 0 1.5em 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+#main-header {
+	background: #FBF2EF;
+	color: black;
+	height: 90px;
+}
+
+#main-header a {
+	color: black;
+}
+
+#logo-header {
+	float: left;
+	padding: 30px 0 0 20px;
+	text-decoration: none;
+}
+
+#logo-header:hover {
+	color: #000000;
+}
+
+#logo-header .site-name {
+	display: block;
+	font-weight: 700;
+	font-size: 1.2em;
+}
+
+#logo-header .site-desc {
+	display: block;
+	font-weight: 300;
+	font-size: 0.8em;
+	color: #000;
+}
+
+nav {
+	float: right;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding-right: 20px;
+}
+
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+}
+
+nav ul li a {
+	display: block;
+	padding: 0 10px;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	background: #FF8000;
+}
+
+#main-content {
+	background: white;
+	width: 90%;
+	max-width: 800px;
+	margin: 20px auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+#main-content header,
+#main-content .content {
+	padding: 40px;
+}
+
+#main-footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 40px;
+}
+
+#main-footer p {
+	margin: 0;
+}
+
+#main-footer a {
+	color: white;
+}
+
+#main-header {
+	background: #A4A4A4;
+	color: black;
+	height: 80px;
+
+	width: 100%;
+	left: 0;
+	top: 0;
+	position: fixed;
+}
+
+table {
+	border: 1px solid #FF8000;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table td {
+	/*border:1px solid #D35400;*/
+	padding: 5px;
+}
+
+button {
+	display: inline-block;
+	border-radius: 4px;
+	background-color: #0080FF;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 15px;
+	padding: 15px;
+	width: 15%;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+button:hover span {
+	padding-right: 25px;
+}
+
+button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.sinborde {
+	border: 0;
+	font-size: 12pt;
+}
+
+.contenedor-modal {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.contenedor-modal button {
+	position: relative;
+	top: 40%;
+}
+
+.popup {
+	background-color: #ffffff;
+	color: #888888;
+	height: 245px;
+	left: 100%;
+	padding: 20px;
+	position: fixed;
+	right: 30%;
+	top: 25%;
+	width: 550px;
+	z-index: 101;
+	-moz-box-shadow: 0px 0px 10px 1px #888888;
+	-webkit-box-shadow: 0px 0px 10px 1px #888888;
+	box-shadow: 0px 0px 10px 1px #888888;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+.overlay {
+	background: #000000;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 100;
+	opacity: 0.5;
+}
+
+a.close {
+	background: url("cancel.png") repeat scroll left top transparent;
+	cursor: pointer;
+	float: right;
+	height: 26px;
+	left: 32px;
+	position: relative;
+	top: -33px;
+	width: 26px;
+}
