@@ -1348,7 +1348,7 @@ function buscar_datos(){
       {
          /*
 
-      Variable para ver los datos traidos por json
+   cambio de texto   Variable para ver los datos traidos por json
          console.log(data)*/
 
 /*         Se limpia el select por si se cambia el codigo postal
