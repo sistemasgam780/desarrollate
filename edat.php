@@ -2107,4 +2107,7 @@ $conexion->close(); //cerramos la conexión
   function goActive() {
     startTimer();
   }
+  function a(){
+
+  }
 </script>
