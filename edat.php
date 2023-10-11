@@ -100,15 +100,6 @@ $result6 = $conexion->query($sql6);
 $sql7 = "SELECT * FROM knowout";
 $result7 = $conexion->query($sql7);
 
-//consulta .evaluacion / GENERO
-$sql8 = "SELECT * FROM genero";
-$result8 = $conexion->query($sql8);
-
-//consulta .evaluacion / nacionalidad
-$sql9 = "SELECT * FROM nacionalidad";
-$result9 = $conexion->query($sql9);
-
-
 //comprobacion de resultados 1
 if ($result->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
 {
@@ -175,27 +166,6 @@ if ($result7->num_rows > 0) //si la variable tiene al menos 1 fila entonces segu
   $combobit7 = "";
   while ($row = $result7->fetch_array(MYSQLI_ASSOC)) {
     $combobit7 .= " <option value='" . $row['factor'] . "'>" . $row['factor'] . "</option>"; //concatenamos el los options para luego ser insertado en el HTML
-  }
-} else {
-  echo "No hubo resultados";
-}
-
-//comprobacion de resultados 8
-if ($result8->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
-{
-  $combobit8 = "";
-  while ($row = $result8->fetch_array(MYSQLI_ASSOC)) {
-    $combobit8 .= " <option value='" . $row['resultado'] . "'>" . $row['resultado'] . "</option>"; //concatenamos el los options para luego ser insertado en el HTML
-  }
-} else {
-  echo "No hubo resultados";
-}
-//comprobacion de resultados 9
-if ($result9->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
-{
-  $combobit9 = "";
-  while ($row = $result9->fetch_array(MYSQLI_ASSOC)) {
-    $combobit9 .= " <option value='" . $row['resultado'] . "'>" . $row['resultado'] . "</option>"; //concatenamos el los options para luego ser insertado en el HTML
   }
 } else {
   echo "No hubo resultados";
@@ -277,9 +247,16 @@ $conexion->close(); //cerramos la conexión
             <input type="date" name="fecha_contacto" value="" id="fecha_contacto" class="form-control input-sm">
 
 
-            <label>Nombre Completo:</label>
-            <input type="text" name="" value="" id="nombre" class="form-control input-sm" placeholder="Nombre A.Paterno A.Materno" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" onKeyUp="this.value=this.value.toUpperCase();">
-            <input hidden type="text" name="" value="" id="apellido">
+            <label>Nombre:</label>
+            <input type="text" name="" onkeypress="return check(event)" value="" required id="nombre" class="form-control input-sm" placeholder="Nombre " onKeyUp="this.value=this.value.toUpperCase();">
+            
+
+            <label>Apellido Paterno:</label>
+            <input type="text" name="" onkeypress="return check(event)" value="" required id="apellido" class="form-control input-sm" placeholder=" A.Paterno"  onKeyUp="this.value=this.value.toUpperCase();">
+
+
+            <label>Apellido Materno:</label>
+            <input type="text" name=" " onkeypress="return check(event)" value="" id="amaterno" class="form-control input-sm" placeholder=" A.Materno"  onKeyUp="this.value=this.value.toUpperCase();">
 
             <label>Teléfono:</label>
             <input type="text" name="" value="" id="telefono" class="form-control input-sm" placeholder="5525693325">
@@ -377,7 +354,7 @@ $conexion->close(); //cerramos la conexión
     <div class="modal-dialog modal-sm" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" onclick="limpiarcolonia();" class="close" data-dismiss="modal"  aria-label="Close"><span onclick="limpiarcolonia();" aria-hidden="true">&times;</span></button>
           <h4 class="modal-title" id="myModalLabel"><b>Ficha Identidad</b></h4>
         </div>
         <div class="modal-body">
@@ -394,14 +371,33 @@ $conexion->close(); //cerramos la conexión
           </select>
 
           <div id="t_entrevista" name="t_entrevista" style="display:none;">
-            
-            <label>Fecha de nacimiento:</label>
+          <label>Fecha de nacimiento:</label>
             <input type="date" name="" value="" id="fechaNacimiento" class="form-control input-sm" placeholder="Ingrese su fecha de nacimiento">
+            <label>Edad:</label>
+            <input type="number" name="" value="" id="edad" class="form-control input-sm" placeholder="Ingrese su edad">
             <label>Estado Civil:</label>
             <select type="text" name="" value="" id="edo_civil" class="form-control input-sm">
               <option selected disabled hidden value="">Seleccione:</option>
               <?php echo $combobit3; ?>
             </select>
+
+
+
+            <label>Código Postal:</label>
+           <input type="number" name="cp" value="" id="cp"  class="form-control input-sm" placeholder="Ingrese su CP" onchange ="buscar_datos();">
+
+
+            <label>Estado:</label>
+           <input type="text" name="" value="" id="estado" class="form-control input-sm" readonly placeholder="Estado">
+  
+            <label>Municipio/Delegación:</label>
+           <input type="text" name="" value="" id="municipio" class="form-control input-sm" readonly  placeholder="Municipio">
+                       
+          <label>Colonia:</label>
+            <select type="text" name="" value="" id="colonia" class="form-control input-sm">
+              
+            </select>
+
             <label>Género:</label>
             <select type="text" name="" value="" id="genero" class="form-control input-sm">
               <option selected disabled hidden value="">Seleccione:</option>
@@ -412,14 +408,10 @@ $conexion->close(); //cerramos la conexión
               <option selected disabled hidden value="">Seleccione:</option>
               <?php echo $combobit9; ?>
             </select>
-            <label>Alcaldía:</label>
-            <select type="text" name="" value="" id="direccion" class="form-control input-sm">
-              <option selected disabled hidden value="">Seleccione:</option>
-              <?php echo $combobit4; ?>
-            </select>
+            
             <label>No. Dependientes Económicos:</label>
             <input type="number" name="" value="" id="dependientes" class="form-control input-sm" placeholder="Ingrese el número de dependientes">
-            <label>Ultima Ocupación:</label>
+            <label>Ocupación Actual:</label>
             <input type="text" name="" value="" id="ocupacion" class="form-control input-sm" placeholder="Ingrese su ocupación" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" onKeyUp="this.value=this.value.toUpperCase();">
             <label>Escolaridad:</label>
             <select type="text" name="" value="" id="escolaridad" onchange="mostrarcarrera();" class="form-control input-sm">
@@ -430,7 +422,6 @@ $conexion->close(); //cerramos la conexión
             <input type="text" name="" value="" id="carrera" class="form-control input-sm" style="display:none;" placeholder="Ingrese su carrera" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" onKeyUp="this.value=this.value.toUpperCase();">
             <label>Institución:</label>
             <input type="text" name="" value="" id="institucion" class="form-control input-sm" placeholder="UNAM, UAM, IPN, ETC." pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" onKeyUp="this.value=this.value.toUpperCase();">
-            
             <label>Ingreso Actual o Anterior:</label>
             <input type="text" name="" value="" id="ingreso" class="number form-control input-sm" placeholder="Ingrese el ingreso correspondiente" maxlength="20" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
             <label>Transporte:</label>
@@ -960,7 +951,7 @@ $conexion->close(); //cerramos la conexión
     </div>
   </div>
 
-  <!--Modal para Riesgos Financieros-->
+  <!--Modal para Potencial de agente-->
   <div class="modal fade" id="modalPotencial_a" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -969,11 +960,11 @@ $conexion->close(); //cerramos la conexión
           <h4 class="modal-title" id="myModalLabel"><b>Evaluación</b></h4>
         </div>
         <div class="modal-body">
-          <label class="potencialA">Riesgos Financieros</label>
+          <label class="potencialA">Potencial Agente</label>
           <table class="table table-striped table-bordered" border="1" cellpadding="0" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse;border-color:#ddd;" id="tablaPotencial_a">
             <thead>
               <tr>
-                <th class="encabezadoPot_a">CRÉDITO</th>
+                <th class="encabezadoPot_a">CRITERIO</th>
                 <th class="encabezadoPot_a">SÍ</th>
                 <th colspan="2" class="encabezadoPot_a">NO</th>
               </tr>
@@ -982,7 +973,7 @@ $conexion->close(); //cerramos la conexión
               <form id="form_potA" name="form_potA" method="POST">
                 <!-- Pregunta 1 -->
                 <tr>
-                  <th colspan="1" class="txtPot_a">1. ¿Actualemnte cuentas con crédito INFONAVIT?</th>
+                  <th colspan="1" class="txtPot_a">1. ¿Qué facilidad tiene para conectar con las personas?</th>
                   <th>
                     <div class="custom-control custom-radio custom-control-inline">
                       <input type="radio" class="custom-control-input" name="p1_potencialAgente" id="p1A_1" onclick="sumaRadio_a(); sumaexitoP_a();">
@@ -997,7 +988,7 @@ $conexion->close(); //cerramos la conexión
 
                 <!-- Pregunta 2 -->
                 <tr>
-                  <th colspan="1" class="txtPot_a">2. ¿Actualemnte cuentas con crédito FONACOT?</th>
+                  <th colspan="1" class="txtPot_a">2. ¿Sus contactos consideran que tienes buena credibilidad profesional?</th>
                   <th>
                     <div class="custom-control custom-radio custom-control-inline">
                       <input type="radio" class="custom-control-input" name="p2_potencialAgente" id="p2A_1" onclick="sumaRadio_a(); sumaexitoP_a();">
@@ -1010,17 +1001,9 @@ $conexion->close(); //cerramos la conexión
                   </th>
                 </tr>
 
-                <thead>
-                  <tr>
-                    <th class="encabezadoPot_a">LEGAL</th>
-                    <th class="encabezadoPot_a"> </th>
-                    <th colspan="2" class="encabezadoPot_a"> </th>
-                  </tr>
-                </thead>
-
                 <!-- Pregunta 3 -->
                 <tr>
-                  <th colspan="1" class="txtPot_a">3. ¿Actualmente te encuentras involucrado en algún conflicto legal (DEMANDA)?</th>
+                  <th colspan="1" class="txtPot_a">3. ¿Su experiencia en ventas es nula, empírica, básica, intermia o avanzada?</th>
                   <th>
                     <div class="custom-control custom-radio custom-control-inline">
                       <input type="radio" class="custom-control-input" name="p3_potencialAgente" id="p3A_1" onclick="sumaRadio_a(); sumaexitoP_a();">
@@ -1033,17 +1016,9 @@ $conexion->close(); //cerramos la conexión
                   </th>
                 </tr>
 
-                <thead>
-                  <tr>
-                    <th class="encabezadoPot_a">BURO</th>
-                    <th class="encabezadoPot_a"> </th>
-                    <th colspan="2" class="encabezadoPot_a"> </th>
-                  </tr>
-                </thead>
-
                 <!-- Pregunta 4 -->
                 <tr>
-                  <th colspan="1" class="txtPot_a">4. ¿Actualemente estas en buró de crédito?</th>
+                  <th colspan="1" class="txtPot_a">4. ¿El total de contactos son personas de redes sociales o por conocidos cercanos?</th>
                   <th>
                     <div class="custom-control custom-radio custom-control-inline">
                       <input type="radio" class="custom-control-input" name="p4_potencialAgente" id="p4A_1" onclick="sumaRadio_a(); sumaexitoP_a();">
@@ -1056,6 +1031,43 @@ $conexion->close(); //cerramos la conexión
                   </th>
                 </tr>
 
+                <!-- Pregunta 5 -->
+                <tr>
+                  <th colspan="1" class="txtPot_a">5. ¿El volumen de clientes fue por atención directa o por asignación de base de prospectos?</th>
+                  <th>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" class="custom-control-input" name="p5_potencialAgente" id="p5A_1" onclick="sumaRadio_a(); sumaexitoP_a();">
+                    </div>
+                  </th>
+                  <th>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" class="custom-control-input" name="p5_potencialAgente" id="p5A_0" onclick="sumaRadio_a(); sumaexitoP_a();">
+                    </div>
+                  </th>
+                </tr>
+
+                <thead>
+                  <tr>
+                    <th class="encabezadoPot_a">COMPROBACIÓN ECONÓMICA DE LA RED DE CONTACTOS</th>
+                    <th class="encabezadoPot_a">+ 50%</th>
+                    <th colspan="2" class="encabezadoPot_a">- 50%</th>
+                  </tr>
+                </thead>
+
+                <!-- Pregunta 6 -->
+                <tr>
+                  <th colspan="1" class="txtPot_a">6. ¿Qué porcentaje consideras que gana más de $20,000.00 al mes?</th>
+                  <th>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" class="custom-control-input" name="p6_potencialAgente" id="p6A_1" onclick="sumaRadio_a(); sumaexitoP_a();">
+                    </div>
+                  </th>
+                  <th>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" class="custom-control-input" name="p6_potencialAgente" id="p6A_0" onclick="sumaRadio_a(); sumaexitoP_a();">
+                    </div>
+                  </th>
+                </tr>
 
                 <input hidden value="0" onkeypress="sumaexitoA();" id="uno_p1" type="text">
                 <input hidden value="0" onkeypress="sumaexitoA();" id="dos_p2" type="text">
@@ -1064,6 +1076,12 @@ $conexion->close(); //cerramos la conexión
                 <input hidden value="0" onkeypress="sumaexitoA();" id="cinco_p5" type="text">
                 <input hidden value="0" onkeypress="sumaexitoA();" id="seis_p6" type="text">
 
+                <th colspan="5">
+                  <label class="sumaPot">Puntos potencial de agente</label>
+                  <input disabled type="text" id="sumaexitoA" style="height:50px" class="form-control input-sm">
+                </th>
+
+                <input hidden id="sumapotencial_a" name="sumapotencial_a" value="">
               </form>
             </tbody>
           </table>
@@ -1113,6 +1131,7 @@ $conexion->close(); //cerramos la conexión
             <option value="Interpersonal">INTERPERSONAL</option>
             <option value="Interpersonal/Analitico">INTERPERSONAL/ANALÍTICO </option>
             <option value="Interpersonal/Dinamico">INTERPERSONAL/DINÁMICO</option>
+            <option value="Interpersonal/Dinamico">NO SE PUEDE DETERMINAR</option>
           </select>
         </div>
         <div class="modal-footer">
@@ -1236,6 +1255,8 @@ $conexion->close(); //cerramos la conexión
             <option value="Provisional">PROVISIONAL</option>
             <option value="Definitiva">DEFINITIVA</option>
           </select>
+           <label>CUA:</label>
+                <input type="text" class="form-control input-sm" id="cua" name="" value="">
           <label>Fecha de Conexión:</label>
           <input type="date" class="form-control input-sm" id="fecha_conexion1" onchange="fc()">
           <input type="text" hidden id="fecha_conexion" name="" value="">
@@ -1298,6 +1319,66 @@ $conexion->close(); //cerramos la conexión
 
 <script type="text/javascript">
   // Se manda a refrescar la tabla
+
+function limpiarcolonia(){
+   $("#cp").val("");
+   $("#municipio").val("");
+   $("#estado").val("");
+    $("#colonia").empty();
+}
+
+
+
+function buscar_datos(){
+
+  cp = $("#cp").val();
+    
+    var parametros = 
+    {
+      "buscar": "1",
+      "cp" : cp
+    };
+    $.ajax(
+    {
+      data:  parametros,
+      dataType: 'json',
+      url:   'codigoP.php',
+      type:  'GET',
+      success:  function (data) 
+      {
+         /*
+
+      Variable para ver los datos traidos por json
+         console.log(data)*/
+
+/*         Se limpia el select por si se cambia el codigo postal
+*/
+        $("#colonia").empty();
+ 
+/*   Este for es para poner las colonias en el select de colonia
+*/
+         for (var i = 0; i < data.length; i++) {
+               $('#colonia').append($('<option>', {
+                                     value: data[i].colonia,
+                                     text: data[i].colonia
+                                 }));
+
+                      $("#estado").val(data[i].estado);
+                       $("#municipio").val(data[i].municipio);
+
+                    }
+/*                    Cierre for 
+*/       
+      } /*  cierre success*/
+
+    }) /*  cierre ajax*/
+
+}     /*  cierre funcion buscar_datos*/
+
+
+
+
+
   $(document).ready(function() {
     $('#tabla').load('componentes/tabla.php');
   });
@@ -1328,6 +1409,7 @@ $conexion->close(); //cerramos la conexión
       fecha_contacto = $('#fecha_contacto').val();
       nombre = $('#nombre').val();
       apellido = $('#apellido').val();
+      amaterno = $('#amaterno').val();
       fechareg = $('#fechareg').val();
       telefono = $('#telefono').val();
       correo = $('#correo').val();
@@ -1347,7 +1429,31 @@ $conexion->close(); //cerramos la conexión
           allowOutsideClick: false
         });
         return false;
-      } else if (fecha_contacto) {
+      } 
+
+               // Alerta para confirmar si la fecha de contacto en el modal nuevo prospecto es la correcta
+      else if (nombre == '') {
+        swal({
+          title: "¡Error!",
+          text: "Ingrese un Nombre para continuar",
+          type: "error",
+          customClass: 'swal-wide',
+          allowOutsideClick: false
+        });
+        return false;
+
+        }      // Alerta para confirmar si la fecha de contacto en el modal nuevo prospecto es la correcta
+      else if (apellido == '') {
+        swal({
+          title: "¡Error!",
+          text: "Ingrese un Apellido para continuar",
+          type: "error",
+          customClass: 'swal-wide',
+          allowOutsideClick: false
+        });
+      return false;
+
+     }   else if (fecha_contacto) {
         swal({
             title: "¡Verifica!",
             text: "La Fecha de Contacto registrada es: " + fecha_contacto,
@@ -1362,7 +1468,7 @@ $conexion->close(); //cerramos la conexión
           function(isConfirm) {
             if (isConfirm) {
               if (resultado_llamada !== 'CITA') {
-                agregardatos(edat, fecha_contacto, nombre, apellido, fechareg, telefono, correo, fuente, referido, resultado_llamada, fecha_cita, hora_cita);
+                agregardatos(edat, fecha_contacto, nombre, apellido, amaterno, fechareg, telefono, correo, fuente, referido, resultado_llamada, fecha_cita, hora_cita);
                 reload();
               } else if (resultado_llamada == 'CITA' && fecha_cita == '') {
                 swal({
@@ -1386,7 +1492,7 @@ $conexion->close(); //cerramos la conexión
                     customClass: "Custom_Cancel"
                   },
                   function() {
-                    agregardatos(edat, fecha_contacto, nombre, apellido, fechareg, telefono, correo, fuente, referido, resultado_llamada, fecha_cita, hora_cita);
+                    agregardatos(edat, fecha_contacto, nombre, apellido, amaterno, fechareg, telefono, correo, fuente, referido, resultado_llamada, fecha_cita, hora_cita);
                     reload();
                   });
               }
@@ -2106,8 +2212,5 @@ $conexion->close(); //cerramos la conexión
 
   function goActive() {
     startTimer();
-  }
-  function a(){
-
   }
 </script>
