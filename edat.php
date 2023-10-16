@@ -174,6 +174,17 @@ if ($result7->num_rows > 0) //si la variable tiene al menos 1 fila entonces segu
 } else {
   echo "No hubo resultados";
 }
+//comprobacion de resultados 8
+if ($result8->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
+{
+  $combobit8 = "";
+  while ($row = $result7->fetch_array(MYSQLI_ASSOC)) {
+    $combobit8 .= " <option value='" . $row['resultado'] . "'>" . $row['resultado'] . "</option>"; //concatenamos el los options para luego ser insertado en el HTML
+  }
+} else {
+  echo "No hubo resultados";
+}
+
 $conexion->close(); //cerramos la conexión
 ?>
 
