@@ -221,6 +221,8 @@ function actualizaficha() {
     trans = $('#trans').val();
     tiempo = $('#tiempo').val();
     imagen = $('#imagen').val();
+    nacimiento = $('#fechaNacimiento').val();
+    
 
     cadena = "id=" + id +
         "&acudio=" + acudio +
@@ -239,6 +241,7 @@ function actualizaficha() {
         "&ingreso=" + ingreso +
         "&trans=" + trans +
         "&tiempo=" + tiempo +
+        "&fechaNacimiento=" + nacimiento +
         "&imagen=" + imagen;
     $.ajax({
         type: "POST",
