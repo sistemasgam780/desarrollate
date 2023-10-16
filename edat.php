@@ -100,6 +100,14 @@ $result6 = $conexion->query($sql6);
 $sql7 = "SELECT * FROM knowout";
 $result7 = $conexion->query($sql7);
 
+//consulta .evaluacion / GENERO
+$sql8 = "SELECT * FROM genero";
+$result8 = $conexion->query($sql8);
+
+//consulta .evaluacion / nacionalidad
+$sql9 = "SELECT * FROM nacionalidad";
+$result9 = $conexion->query($sql9);
+
 //comprobacion de resultados 1
 if ($result->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
 {
@@ -170,6 +178,28 @@ if ($result7->num_rows > 0) //si la variable tiene al menos 1 fila entonces segu
 } else {
   echo "No hubo resultados";
 }
+//comprobacion de resultados 8
+if ($result8->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
+{
+  $combobit8 = "";
+  while ($row = $result7->fetch_array(MYSQLI_ASSOC)) {
+    $combobit8 .= " <option value='" . $row['resultado'] . "'>" . $row['resultado'] . "</option>"; //concatenamos el los options para luego ser insertado en el HTML
+  }
+} else {
+  echo "No hubo resultados";
+}
+
+//comprobacion de resultados 9
+if ($result9->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
+{
+  $combobit9 = "";
+  while ($row = $result9->fetch_array(MYSQLI_ASSOC)) {
+    $combobit9 .= " <option value='" . $row['resultado'] . "'>" . $row['resultado'] . "</option>"; //concatenamos el los options para luego ser insertado en el HTML
+  }
+} else {
+  echo "No hubo resultados";
+}
+
 $conexion->close(); //cerramos la conexión
 ?>
 
@@ -373,16 +403,12 @@ $conexion->close(); //cerramos la conexión
           <div id="t_entrevista" name="t_entrevista" style="display:none;">
           <label>Fecha de nacimiento:</label>
             <input type="date" name="" value="" id="fechaNacimiento" class="form-control input-sm" placeholder="Ingrese su fecha de nacimiento">
-            <label>Edad:</label>
-            <input type="number" name="" value="" id="edad" class="form-control input-sm" placeholder="Ingrese su edad">
+            
             <label>Estado Civil:</label>
             <select type="text" name="" value="" id="edo_civil" class="form-control input-sm">
               <option selected disabled hidden value="">Seleccione:</option>
               <?php echo $combobit3; ?>
             </select>
-
-
-
             <label>Código Postal:</label>
            <input type="number" name="cp" value="" id="cp"  class="form-control input-sm" placeholder="Ingrese su CP" onchange ="buscar_datos();">
 
