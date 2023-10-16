@@ -373,8 +373,7 @@ $conexion->close(); //cerramos la conexión
           <div id="t_entrevista" name="t_entrevista" style="display:none;">
           <label>Fecha de nacimiento:</label>
             <input type="date" name="" value="" id="fechaNacimiento" class="form-control input-sm" placeholder="Ingrese su fecha de nacimiento">
-            <label>Edad:</label>
-            <input type="number" name="" value="" id="edad" class="form-control input-sm" placeholder="Ingrese su edad">
+            
             <label>Estado Civil:</label>
             <select type="text" name="" value="" id="edo_civil" class="form-control input-sm">
               <option selected disabled hidden value="">Seleccione:</option>
