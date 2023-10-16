@@ -104,6 +104,10 @@ $result7 = $conexion->query($sql7);
 $sql8 = "SELECT * FROM genero";
 $result8 = $conexion->query($sql8);
 
+//consulta .evaluacion / nacionalidad
+$sql9 = "SELECT * FROM nacionalidad";
+$result9 = $conexion->query($sql9);
+
 //comprobacion de resultados 1
 if ($result->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
 {
@@ -180,6 +184,17 @@ if ($result8->num_rows > 0) //si la variable tiene al menos 1 fila entonces segu
   $combobit8 = "";
   while ($row = $result7->fetch_array(MYSQLI_ASSOC)) {
     $combobit8 .= " <option value='" . $row['resultado'] . "'>" . $row['resultado'] . "</option>"; //concatenamos el los options para luego ser insertado en el HTML
+  }
+} else {
+  echo "No hubo resultados";
+}
+
+//comprobacion de resultados 9
+if ($result9->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
+{
+  $combobit9 = "";
+  while ($row = $result9->fetch_array(MYSQLI_ASSOC)) {
+    $combobit9 .= " <option value='" . $row['resultado'] . "'>" . $row['resultado'] . "</option>"; //concatenamos el los options para luego ser insertado en el HTML
   }
 } else {
   echo "No hubo resultados";
