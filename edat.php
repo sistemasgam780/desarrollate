@@ -100,6 +100,10 @@ $result6 = $conexion->query($sql6);
 $sql7 = "SELECT * FROM knowout";
 $result7 = $conexion->query($sql7);
 
+//consulta .evaluacion / GENERO
+$sql8 = "SELECT * FROM genero";
+$result8 = $conexion->query($sql8);
+
 //comprobacion de resultados 1
 if ($result->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
 {
@@ -379,9 +383,6 @@ $conexion->close(); //cerramos la conexión
               <option selected disabled hidden value="">Seleccione:</option>
               <?php echo $combobit3; ?>
             </select>
-
-
-
             <label>Código Postal:</label>
            <input type="number" name="cp" value="" id="cp"  class="form-control input-sm" placeholder="Ingrese su CP" onchange ="buscar_datos();">
 
