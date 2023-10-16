@@ -20,6 +20,9 @@
   $t = $_POST['trans'];
   $ti = $_POST['tiempo'];
   $im = $_POST['imagen'];
+  $nacimiento = $_POST['fecha_nacimiento'];
+  $nacionalidad = $_POST['nacionalidad'];
+  $genero = $_POST['genero'];
 
   date_default_timezone_set("America/Mexico_City");
             $time = time();
@@ -42,7 +45,10 @@
                                       transporte='$t',
                                       t_disponible='$ti',
                                       imagen='$im',
-                                      fec1='$fec1'
+                                      fec1='$fec1',
+                                      genero='$genero',
+                                      nacionalidad='$nacionalidad',
+                                      fecha_nacimiento='$nacimiento'
               where id='$id'";
 
   echo $result = mysqli_query($conexion,$sql);

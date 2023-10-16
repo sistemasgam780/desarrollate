@@ -178,7 +178,7 @@ function actualizadatos() {
                 $('#tabla').load('componentes/tabla.php');
                 alertify.success("Actualizado con Exito :)");
             } else {
-                alertify.error("Fallo el servidor :(");
+                alertify.error("Fallo el servidor :( al actualizar");
             }
         }
     })
@@ -196,7 +196,7 @@ function eliminar() {
                 $('#tabla').load('componentes/tabla.php');
                 alertify.success("Se elimino el registro :)");
             } else {
-                alertify.error("Fallo el servidor :(");
+                alertify.error("Fallo el servidor :( al eliminar");
             }
         }
     });
@@ -221,7 +221,9 @@ function actualizaficha() {
     trans = $('#trans').val();
     tiempo = $('#tiempo').val();
     imagen = $('#imagen').val();
-    nacimiento = $('#fechaNacimiento').val();
+    fecha_nacimiento = $('#fechaNacimiento').val();
+    genero = $('#genero').val();
+    nacionalidad = $('#nacionalidad').val();
     
 
     cadena = "id=" + id +
@@ -241,8 +243,10 @@ function actualizaficha() {
         "&ingreso=" + ingreso +
         "&trans=" + trans +
         "&tiempo=" + tiempo +
-        "&fechaNacimiento=" + nacimiento +
-        "&imagen=" + imagen;
+        "&fecha_nacimiento=" + fecha_nacimiento +
+        "&imagen=" + imagen +
+        "&genero=" + genero +
+        "&nacionalidad=" + nacionalidad;
     $.ajax({
         type: "POST",
         url: "php/actualizaficha.php",
@@ -253,7 +257,7 @@ function actualizaficha() {
                 $('#tabla').load('componentes/tabla.php');
                 alertify.success("Actualizado con Exito :)");
             } else {
-                alertify.error("Fallo el servidor :(");
+                alertify.error("Fallo el servidor :( en ficha identidad");
             }
         }
     })
@@ -289,7 +293,7 @@ function actualizafactores() {
                 $('#tabla').load('componentes/tabla.php');
                 alertify.success("Actualizado con Exito :)");
             } else {
-                alertify.error("Fallo el servidor :(");
+                alertify.error("Fallo el servidor :( al actualizar factores");
             }
         }
     })
